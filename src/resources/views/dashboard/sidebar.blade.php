@@ -58,19 +58,14 @@
 
             <li class="menu-item">
                 <a class="menu-link" data-bs-toggle="collapse" href="#customerMenu" role="button" aria-expanded="false">
-                <i class="menu-icon bx bx-package"></i>
-                <span class="menu-text">Products</span>
+                <i class="menu-icon bx bx-user-circle"></i>
+                <span class="menu-text">Customer</span>
                 <i class="menu-arrow bx bx-chevron-right"></i>
                 </a>
                 <ul class="sub-menu collapse" id="customerMenu">
                 <li class="menu-item">
                     <a href="#" class="menu-link" id="sidebar_register_customer">
-                    <span class="menu-text">Register Customer</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link" id="sidebar_list_customer">
-                    <span class="menu-text">List Customer</span>
+                    <span class="menu-text">Customer</span>
                     </a>
                 </li>
                 </ul>

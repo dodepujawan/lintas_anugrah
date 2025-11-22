@@ -52,74 +52,74 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="kode" class="form-label">KODE <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="kode" name="kode" required>
+                                    <input type="text" class="form-control enter-next" id="kode" name="kode" required data-next="nama">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="nama" class="form-label">NAMA <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="nama" name="nama" required>
+                                    <input type="text" class="form-control enter-next" id="nama" name="nama" required data-next="jenis_usaha">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="jenis_usaha" class="form-label">JENIS USAHA</label>
-                                    <input type="text" class="form-control" id="jenis_usaha" name="jenis_usaha">
+                                    <input type="text" class="form-control enter-next" id="jenis_usaha" name="jenis_usaha" data-next="telepon">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="telepon" class="form-label">TELEPON</label>
-                                    <input type="text" class="form-control" id="telepon" name="telepon">
+                                    <input type="text" class="form-control enter-next" id="telepon" name="telepon" data-next="alamat">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="alamat" class="form-label">ALAMAT</label>
-                                    <textarea class="form-control" id="alamat" name="alamat" rows="2"></textarea>
+                                    <textarea class="form-control enter-next" id="alamat" name="alamat" rows="2" data-next="desa"></textarea>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-3 mb-3">
                                     <label for="desa" class="form-label">DESA</label>
-                                    <input type="text" class="form-control" id="desa" name="desa">
+                                    <input type="text" class="form-control enter-next" id="desa" name="desa" data-next="kecamatan">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="kecamatan" class="form-label">KECAMATAN</label>
-                                    <input type="text" class="form-control" id="kecamatan" name="kecamatan">
+                                    <input type="text" class="form-control enter-next" id="kecamatan" name="kecamatan" data-next="kabupaten">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="kabupaten" class="form-label">KABUPATEN</label>
-                                    <input type="text" class="form-control" id="kabupaten" name="kabupaten">
+                                    <input type="text" class="form-control enter-next" id="kabupaten" name="kabupaten" data-next="kota">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="kota" class="form-label">KOTA</label>
-                                    <input type="text" class="form-control" id="kota" name="kota">
+                                    <input type="text" class="form-control enter-next" id="kota" name="kota" data-next="fax">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="fax" class="form-label">FAX</label>
-                                    <input type="text" class="form-control" id="fax" name="fax">
+                                    <input type="text" class="form-control enter-next" id="fax" name="fax" data-next="kontak">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="kontak" class="form-label">KONTAK</label>
-                                    <input type="text" class="form-control" id="kontak" name="kontak">
+                                    <input type="text" class="form-control enter-next" id="kontak" name="kontak" data-next="email">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="email" class="form-label">EMAIL</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control enter-next" id="email" name="email" data-next="npwp">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="npwp" class="form-label">NPWP</label>
-                                    <input type="text" class="form-control" id="npwp" name="npwp">
+                                    <input type="text" class="form-control enter-next" id="npwp" name="npwp" data-next="top_kredit">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="top_kredit" class="form-label">TOP KREDIT</label>
-                                    <input type="text" class="form-control" id="top_kredit" name="top_kredit">
+                                    <input type="text" class="form-control enter-next" id="top_kredit" name="top_kredit" data-next="purchasing_nama">
                                 </div>
                             </div>
                         </div>
@@ -132,15 +132,15 @@
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="purchasing_nama" class="form-label">NAMA</label>
-                                    <input type="text" class="form-control" id="purchasing_nama" name="purchasing_nama">
+                                    <input type="text" class="form-control enter-next" id="purchasing_nama" name="purchasing_nama" data-next="purchasing_email">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="purchasing_email" class="form-label">EMAIL</label>
-                                    <input type="email" class="form-control" id="purchasing_email" name="purchasing_email">
+                                    <input type="email" class="form-control enter-next" id="purchasing_email" name="purchasing_email" data-next="purchasing_extensi_hp">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="purchasing_extensi_hp" class="form-label">EXTENSI HP</label>
-                                    <input type="text" class="form-control" id="purchasing_extensi_hp" name="purchasing_extensi_hp">
+                                    <input type="text" class="form-control enter-next" id="purchasing_extensi_hp" name="purchasing_extensi_hp" data-next="data_pajak_nama">
                                 </div>
                             </div>
                         </div>
@@ -153,23 +153,23 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="data_pajak_nama" class="form-label">NAMA</label>
-                                    <input type="text" class="form-control" id="data_pajak_nama" name="data_pajak_nama">
+                                    <input type="text" class="form-control enter-next" id="data_pajak_nama" name="data_pajak_nama" data-next="data_pajak_npwp">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="data_pajak_npwp" class="form-label">NPWP</label>
-                                    <input type="text" class="form-control" id="data_pajak_npwp" name="data_pajak_npwp">
+                                    <input type="text" class="form-control enter-next" id="data_pajak_npwp" name="data_pajak_npwp" data-next="data_pajak_alamat">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="data_pajak_alamat" class="form-label">ALAMAT</label>
-                                    <textarea class="form-control" id="data_pajak_alamat" name="data_pajak_alamat" rows="2"></textarea>
+                                    <textarea class="form-control enter-next" id="data_pajak_alamat" name="data_pajak_alamat" rows="2" data-next="data_pajak_alamat2"></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="data_pajak_alamat2" class="form-label">ALAMAT 2</label>
-                                    <textarea class="form-control" id="data_pajak_alamat2" name="data_pajak_alamat2" rows="2"></textarea>
+                                    <textarea class="form-control enter-next" id="data_pajak_alamat2" name="data_pajak_alamat2" rows="2" data-next="pemilik_nama"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -182,70 +182,70 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="pemilik_nama" class="form-label">NAMA PEMILIK</label>
-                                    <input type="text" class="form-control" id="pemilik_nama" name="pemilik_nama">
+                                    <input type="text" class="form-control enter-next" id="pemilik_nama" name="pemilik_nama" data-next="pemilik_no_ktp_sim">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="pemilik_no_ktp_sim" class="form-label">NO. KTP/SIM</label>
-                                    <input type="text" class="form-control" id="pemilik_no_ktp_sim" name="pemilik_no_ktp_sim">
+                                    <input type="text" class="form-control enter-next" id="pemilik_no_ktp_sim" name="pemilik_no_ktp_sim" data-next="pemilik_tempat_lahir">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="pemilik_tempat_lahir" class="form-label">TEMPAT LAHIR</label>
-                                    <input type="text" class="form-control" id="pemilik_tempat_lahir" name="pemilik_tempat_lahir">
+                                    <input type="text" class="form-control enter-next" id="pemilik_tempat_lahir" name="pemilik_tempat_lahir" data-next="pemilik_tgl_lahir">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="pemilik_tgl_lahir" class="form-label">TANGGAL LAHIR</label>
-                                    <input type="date" class="form-control" id="pemilik_tgl_lahir" name="pemilik_tgl_lahir">
+                                    <input type="date" class="form-control enter-next" id="pemilik_tgl_lahir" name="pemilik_tgl_lahir" data-next="pemilik_alamat_rumah">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="pemilik_alamat_rumah" class="form-label">ALAMAT RUMAH</label>
-                                    <textarea class="form-control" id="pemilik_alamat_rumah" name="pemilik_alamat_rumah" rows="2"></textarea>
+                                    <textarea class="form-control enter-next" id="pemilik_alamat_rumah" name="pemilik_alamat_rumah" rows="2" data-next="pemilik_desa"></textarea>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-3 mb-3">
                                     <label for="pemilik_desa" class="form-label">DESA</label>
-                                    <input type="text" class="form-control" id="pemilik_desa" name="pemilik_desa">
+                                    <input type="text" class="form-control enter-next" id="pemilik_desa" name="pemilik_desa" data-next="pemilik_kecamatan">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="pemilik_kecamatan" class="form-label">KECAMATAN</label>
-                                    <input type="text" class="form-control" id="pemilik_kecamatan" name="pemilik_kecamatan">
+                                    <input type="text" class="form-control enter-next" id="pemilik_kecamatan" name="pemilik_kecamatan" data-next="pemilik_kabupaten">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="pemilik_kabupaten" class="form-label">KABUPATEN</label>
-                                    <input type="text" class="form-control" id="pemilik_kabupaten" name="pemilik_kabupaten">
+                                    <input type="text" class="form-control enter-next" id="pemilik_kabupaten" name="pemilik_kabupaten" data-next="pemilik_telepon">
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="pemilik_telepon" class="form-label">TELEPON</label>
-                                    <input type="text" class="form-control" id="pemilik_telepon" name="pemilik_telepon">
+                                    <input type="text" class="form-control enter-next" id="pemilik_telepon" name="pemilik_telepon" data-next="pemilik_fax">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="pemilik_fax" class="form-label">FAX</label>
-                                    <input type="text" class="form-control" id="pemilik_fax" name="pemilik_fax">
+                                    <input type="text" class="form-control enter-next" id="pemilik_fax" name="pemilik_fax" data-next="pemilik_email">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="pemilik_email" class="form-label">EMAIL</label>
-                                    <input type="email" class="form-control" id="pemilik_email" name="pemilik_email">
+                                    <input type="email" class="form-control enter-next" id="pemilik_email" name="pemilik_email" data-next="pemilik_npwp">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="pemilik_npwp" class="form-label">NPWP</label>
-                                    <input type="text" class="form-control" id="pemilik_npwp" name="pemilik_npwp">
+                                    <input type="text" class="form-control enter-next" id="pemilik_npwp" name="pemilik_npwp" data-next="pemilik_agama">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="pemilik_agama" class="form-label">AGAMA</label>
-                                    <input type="text" class="form-control" id="pemilik_agama" name="pemilik_agama">
+                                    <input type="text" class="form-control enter-next" id="pemilik_agama" name="pemilik_agama" data-next="kontak_lain_nama">
                                 </div>
                             </div>
                         </div>
@@ -258,11 +258,11 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="kontak_lain_nama" class="form-label">NAMA</label>
-                                    <input type="text" class="form-control" id="kontak_lain_nama" name="kontak_lain_nama">
+                                    <input type="text" class="form-control enter-next" id="kontak_lain_nama" name="kontak_lain_nama" data-next="kontak_lain_telepon">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="kontak_lain_telepon" class="form-label">TELEPON</label>
-                                    <input type="text" class="form-control" id="kontak_lain_telepon" name="kontak_lain_telepon">
+                                    <input type="text" class="form-control enter-next" id="kontak_lain_telepon" name="kontak_lain_telepon" data-next="accounting_nama">
                                 </div>
                             </div>
                         </div>
@@ -275,11 +275,11 @@
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="accounting_nama" class="form-label">NAMA</label>
-                                    <input type="text" class="form-control" id="accounting_nama" name="accounting_nama">
+                                    <input type="text" class="form-control enter-next" id="accounting_nama" name="accounting_nama" data-next="accounting_email">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="accounting_email" class="form-label">EMAIL</label>
-                                    <input type="email" class="form-control" id="accounting_email" name="accounting_email">
+                                    <input type="email" class="form-control enter-next" id="accounting_email" name="accounting_email" data-next="accounting_extensi_hp">
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="accounting_extensi_hp" class="form-label">EXTENSI HP</label>
@@ -350,6 +350,10 @@ $(document).ready(function() {
         $('#customer-form').attr('data-method', 'store');
         $('#customer-modal').modal('show');
         $('#form-errors').addClass('d-none');
+        // panggil fungsi next click
+        initializeEnterNext();
+        // Focus ke field pertama saat modal dibuka
+        $('#kode').focus();
     });
     // ================================= End Of Add button click  =================================
     // ===================================== Edit button click =====================================
@@ -359,6 +363,10 @@ $(document).ready(function() {
         $('#customer-form').attr('data-method', 'update');
         $('#customer-form').attr('data-id', id);
         $('#form-errors').addClass('d-none');
+        // panggil fungsi next click
+        initializeEnterNext();
+        // Focus ke field pertama saat modal dibuka
+        $('#kode').focus();
 
         // Load data via AJAX
         $.ajax({
@@ -387,6 +395,19 @@ $(document).ready(function() {
         });
     });
     // =============================== End Of Edit button click ===================================
+    // =============================== Function Next Form click ===================================
+    function initializeEnterNext() {
+        $('.enter-next').off('keypress').on('keypress', function(e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                var nextFieldId = $(this).data('next');
+                if (nextFieldId && $('#' + nextFieldId).length) {
+                    $('#' + nextFieldId).focus();
+                }
+            }
+        });
+    }
+    // ============================ End Of Function Next Form click ================================
     // ================================= View button click ===================================
     $(document).on('click', '.view-btn-customer', function() {
         var id = $(this).data('id');
@@ -481,9 +502,6 @@ $(document).ready(function() {
             $.ajax({
                 url: '{{ route("customer_destroy", ["id" => ":id"]) }}'.replace(':id', id),
                 type: 'POST',
-                headers: {
-                    'X-HTTP-Method-Override': 'DELETE'
-                },
                 success: function(response) {
                     if (response.status === 'success') {
                         table.ajax.reload();
