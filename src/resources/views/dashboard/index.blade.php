@@ -56,6 +56,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <!-- Dode CSS -->
     <link rel="stylesheet" href="{{ asset('dashboard/sneat/assets/dode/the.css') }}" />
+    <!-- Modal CSS -->
+    <link rel="stylesheet" href="{{ asset('dashboard/sneat/assets/dode/modal.css') }}" />
     <!-- Datatables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.dataTables.min.css">
 

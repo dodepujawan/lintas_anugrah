@@ -26,35 +26,6 @@
             </li> --}}
 
             <li class="menu-header">Management</li>
-            <li class="menu-item">
-                <a class="menu-link" data-bs-toggle="collapse" href="#userMenu" role="button" aria-expanded="false">
-                <i class="menu-icon bx bx-user"></i>
-                <span class="menu-text">User Management</span>
-                <i class="menu-arrow bx bx-chevron-right"></i>
-                </a>
-                <ul class="sub-menu collapse" id="userMenu">
-                <li class="menu-item">
-                    <a href="#" class="menu-link active" id="sidebar_list_user">
-                    <span class="menu-text">All Users</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link" id="sidebar_new_user">
-                    <span class="menu-text">Add New User</span>
-                    </a>
-                </li>
-                {{-- <li class="menu-item">
-                    <a href="#" class="menu-link">
-                    <span class="menu-text">User Roles</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                    <span class="menu-text">Permissions</span>
-                    </a>
-                </li> --}}
-                </ul>
-            </li>
 
             <li class="menu-item">
                 <a class="menu-link" data-bs-toggle="collapse" href="#customerMenu" role="button" aria-expanded="false">
@@ -83,6 +54,51 @@
                     <span class="menu-text">Kendaraan</span>
                     </a>
                 </li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" data-bs-toggle="collapse" href="#driverMenu" role="button" aria-expanded="false">
+                <i class="menu-icon bx bx-user-pin"></i>
+                <span class="menu-text">Driver</span>
+                <i class="menu-arrow bx bx-chevron-right"></i>
+                </a>
+                <ul class="sub-menu collapse" id="driverMenu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="sidebar_new_driver">
+                    <span class="menu-text">Driver</span>
+                    </a>
+                </li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" data-bs-toggle="collapse" href="#userMenu" role="button" aria-expanded="false">
+                <i class="menu-icon bx bx-user"></i>
+                <span class="menu-text">User Management</span>
+                <i class="menu-arrow bx bx-chevron-right"></i>
+                </a>
+                <ul class="sub-menu collapse" id="userMenu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link active" id="sidebar_list_user">
+                    <span class="menu-text">All Users</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="sidebar_new_user">
+                    <span class="menu-text">Add New User</span>
+                    </a>
+                </li>
+                {{-- <li class="menu-item">
+                    <a href="#" class="menu-link">
+                    <span class="menu-text">User Roles</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                    <span class="menu-text">Permissions</span>
+                    </a>
+                </li> --}}
                 </ul>
             </li>
             {{-- Extra Spasi --}}

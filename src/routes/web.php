@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\DriverController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -51,6 +52,15 @@ Route::prefix('kendaraan')->group(function () {
     Route::get('/edit/{id}', [KendaraanController::class, 'edit'])->name('kendaraan.edit');
     Route::post('/update/{id}', [KendaraanController::class, 'update'])->name('kendaraan.update');
     Route::post('/delete/{id}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
+});
+
+Route::prefix('driver')->group(function () {
+    Route::get('/', [DriverController::class, 'index'])->name('driver.index');
+    Route::get('/data', [DriverController::class, 'data'])->name('driver.data');
+    Route::get('/edit/{id}', [DriverController::class, 'edit'])->name('driver.edit');
+    Route::post('/store', [DriverController::class, 'store'])->name('driver.store');
+    Route::post('/update/{id}', [DriverController::class, 'update'])->name('driver.update');
+    Route::post('/destroy/{id}', [DriverController::class, 'destroy'])->name('driver.destroy');
 });
 
 

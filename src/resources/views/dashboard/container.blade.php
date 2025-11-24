@@ -110,6 +110,25 @@ $(document).ready(function() {
         });
     }
 // ========================= End Of New Kendaraan ======================================
+// ========================= New Driver ======================================
+    $(document).on('click', '#sidebar_new_driver', function(e) {
+        e.preventDefault();
+        loadNewDriverForm();
+    });
+
+    function loadNewDriverForm() {
+        $.ajax({
+            url: '{{ route('driver.index') }}', // Route to load the form
+            type: 'GET',
+            success: function(response) {
+                $('.master-page').html(response);
+            },
+            error: function() {
+                $('.master-page').html('<p>Error loading form.</p>');
+            }
+        });
+    }
+// ========================= End Of New Driver ======================================
 // +++++++++++++++++++++++++++ End Of SIDEBAR ROOM ++++++++++++++++++++++++++++++++++++++
 });
 </script>
