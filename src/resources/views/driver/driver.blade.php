@@ -1,13 +1,72 @@
+<style>
+    .card-driver {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .card-driver-header {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card-driver-header h5 {
+        color: #007bff;
+        margin: 0;
+    }
+
+    /* Untuk mobile */
+    @media (max-width: 576px) {
+        .card-driver-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card-driver-header > div:last-child {
+            align-self: flex-end;
+        }
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+    }
+
+    .btn {
+        border-radius: 6px;
+        font-weight: 500;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+</style>
 <div class="container mt-4">
     <h2>Data Driver</h2>
     <!-- Tabel Data -->
     <div class="card-driver" id="tableDriver">
-        <div>
-            <button class="btn btn-primary" id="add_driver">+ Add Driver</button>
-        </div>
-        <div class="card-driver-header">
-            <h5>Daftar Driver</h5>
-        </div>
+            <div class="card-driver-header">
+                <div>
+                    <h5>Daftar Driver</h5>
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="add_driver">+ Add Driver</button>
+                </div>
+            </div>
         <div class="card-driver-body">
             <table class="table table-bordered" id="driverTable">
                 <thead>
@@ -45,7 +104,7 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="kode" class="form-label">Kode <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="kode" name="kode" required maxlength="20">
+                            <input type="text" class="form-control" id="kode" name="kode" required maxlength="20" readonly>
                             <div class="form-text text-muted">Kode unik driver (maksimal 20 karakter)</div>
                         </div>
                         <div class="mb-3">
@@ -80,48 +139,6 @@
         </div>
     </div>
 </div>
-
-<style>
-.card-driver {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.card-driver-header {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.card-driver-header h5 {
-    color: #007bff;
-    margin: 0;
-}
-
-.table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-}
-
-.btn {
-    border-radius: 6px;
-    font-weight: 500;
-}
-
-.form-label {
-    font-weight: 500;
-    color: #495057;
-}
-
-.form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-</style>
-
 <script>
 $(document).ready(function() {
     // Set CSRF token in AJAX setup
@@ -185,6 +202,20 @@ $(document).ready(function() {
         $("#formTitle").text("Form Tambah Driver");
         $("#submitBtn").text("Simpan");
         resetForm();
+        $('#nama').focus();
+        load_kode_driver();
+        function load_kode_driver() {
+            $.ajax({
+                url: '{{ route('driver_kode') }}', // Route to load the form
+                type: 'GET',
+                success: function(response) {
+                    $('#kode').val(response.kode);
+                },
+                error: function() {
+                    $('#kode').val('<p>Error loading form.</p>');
+                }
+            });
+        }
     });
 
     $("#list_driver").click(function(e) {

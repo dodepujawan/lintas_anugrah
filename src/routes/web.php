@@ -66,6 +66,8 @@ Route::prefix('driver')->group(function () {
     Route::post('/store', [DriverController::class, 'store'])->name('driver.store');
     Route::post('/update/{id}', [DriverController::class, 'update'])->name('driver.update');
     Route::post('/destroy/{id}', [DriverController::class, 'destroy'])->name('driver.destroy');
+    // Callback
+    Route::get('/driver_kode', [DriverController::class, 'driver_kode'])->name('driver_kode');
 });
 
 

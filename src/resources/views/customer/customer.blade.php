@@ -1,9 +1,68 @@
+<style>
+    .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .card-customer-header {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card-customer-header h5 {
+        color: #007bff;
+        margin: 0;
+    }
+
+    /* Untuk mobile */
+    @media (max-width: 576px) {
+        .card-customer-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card-customer-header > div:last-child {
+            align-self: flex-end;
+        }
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+    }
+
+    .btn {
+        border-radius: 6px;
+        font-weight: 500;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="card-title">DATA CUSTOMER</h3>
+                <div class="card-customer-header">
+                    <div>
+                        <h5>Data Customer</h5>
+                    </div>
                     <button class="btn btn-primary" id="add-btn-customer">
                         <i class="fas fa-plus"></i> Tambah Customer
                     </button>
