@@ -84,6 +84,11 @@
                     <span class="menu-text">Price</span>
                     </a>
                 </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="sidebar_prices_customer">
+                    <span class="menu-text">Price Customer</span>
+                    </a>
+                </li>
                 </ul>
             </li>
 

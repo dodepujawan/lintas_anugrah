@@ -8,6 +8,7 @@ use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\PricesController;
 use App\Http\Controllers\RuteController;
+use App\Http\Controllers\PricesCustomerController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -89,6 +90,12 @@ Route::prefix('rute')->group(function() {
     Route::post('/destroy/{id}', [RuteController::class, 'destroy'])->name('rute.destroy');
 });
 
+Route::prefix('price-customer')->group(function() {
+    Route::get('/', [PricesCustomerController::class, 'index'])->name('price-customer.index');
+    Route::get('/data', [PricesCustomerController::class, 'getData'])->name('price-customer.data');
+    Route::get('/price/{kodecus}', [PricesCustomerController::class, 'getPrice'])->name('price-customer.price');
+    Route::post('/update-row', [PricesCustomerController::class, 'saveCustomerRow'])->name('price-customer.update-row');
+});
 
 // Route::prefix('register')->group(function () {
 //     Route::get('/users', UsersPage::class)->name('users.page');

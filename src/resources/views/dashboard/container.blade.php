@@ -129,7 +129,7 @@ $(document).ready(function() {
         });
     }
 // ========================= End Of New Driver ======================================
-// ========================= New Driver ======================================
+// ========================= New Prices ======================================
     $(document).on('click', '#sidebar_new_prices', function(e) {
         e.preventDefault();
         loadNewPriceForm();
@@ -147,7 +147,26 @@ $(document).ready(function() {
             }
         });
     }
-// ========================= End Of New Driver ======================================
+// ========================= End Of New Prices ======================================
+// ========================= New Prices Customer ======================================
+    $(document).on('click', '#sidebar_prices_customer', function(e) {
+        e.preventDefault();
+        loadPriceCustomerForm();
+    });
+
+    function loadPriceCustomerForm() {
+        $.ajax({
+            url: '{{ route('price-customer.index') }}', // Route to load the form
+            type: 'GET',
+            success: function(response) {
+                $('.master-page').html(response);
+            },
+            error: function() {
+                $('.master-page').html('<p>Error loading form.</p>');
+            }
+        });
+    }
+// ========================= End Of New Prices Customer ======================================
 // +++++++++++++++++++++++++++ End Of SIDEBAR ROOM ++++++++++++++++++++++++++++++++++++++
 });
 </script>

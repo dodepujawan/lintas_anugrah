@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prices', function (Blueprint $table) {
+        Schema::create('pricecus', function (Blueprint $table) {
             $table->id('id');
+            $table->string('KODECUS', 20)->unique();
             $table->string('KODE', 20)->unique(); // Kolom baru untuk kode unik
             $table->string('KETERANGAN', 50); // ganti char jadi string
             $table->decimal('DARI', 10, 0)->default(0);
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prices');
+        Schema::dropIfExists('pricecus');
     }
 };

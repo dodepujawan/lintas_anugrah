@@ -20,7 +20,7 @@ class PricesController extends Controller
             $data = DB::table('prices')
                 ->leftJoin('rute', 'prices.RUTE', '=', 'rute.id')
                 ->select(
-                    'prices.ID',
+                    'prices.id',
                     'prices.KETERANGAN',
                     'prices.DARI',
                     'prices.SAMPAI',
@@ -48,10 +48,10 @@ class PricesController extends Controller
 
                     return '
                         <div class="btn-group">
-                            <button onclick="editData('.$row->ID.')" class="btn btn-sm btn-warning">
+                            <button onclick="editData('.$row->id.')" class="btn btn-sm btn-warning">
                                 <i class="bx bx-edit"></i>
                             </button>
-                            <button onclick="deleteData('.$row->ID.')" class="btn btn-sm btn-danger">
+                            <button onclick="deleteData('.$row->id.')" class="btn btn-sm btn-danger">
                                 <i class="bx bx-trash"></i>
                             </button>
                         </div>
@@ -76,9 +76,9 @@ class PricesController extends Controller
         ]);
 
         // Generate KODE
-        $lastCode = Prices::orderBy('ID', 'desc')->value('KODE');
+        $lastCode = Prices::orderBy('id', 'desc')->value('KODE');
         $number = $lastCode ? (int) substr($lastCode, 3) + 1 : 1;
-        $kode = 'PRC' . str_pad($number, 6, '0', STR_PAD_LEFT);
+        $kode = 'PRC' . str_pad($number, 7, '0', STR_PAD_LEFT);
 
         $Prices = Prices::create([
             'KODE' => $kode,
@@ -108,7 +108,7 @@ class PricesController extends Controller
         $data = DB::table('prices')
             ->leftJoin('rute', 'prices.RUTE', '=', 'rute.id')
             ->select(
-                'prices.ID',
+                'prices.id',
                 'prices.KETERANGAN',
                 'prices.DARI',
                 'prices.SAMPAI',
@@ -117,11 +117,11 @@ class PricesController extends Controller
                 'prices.HARGA',
                 'prices.JENIS'
             )
-            ->where('prices.ID', $id)
+            ->where('prices.id', $id)
             ->first();
 
         return response()->json([
-            "id"         => $data->ID,
+            "id"         => $data->id,
             "keterangan" => $data->KETERANGAN,
             "dari"       => $data->DARI,
             "sampai"     => $data->SAMPAI,
