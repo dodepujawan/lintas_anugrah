@@ -27,7 +27,7 @@ class PricesCustomerController extends Controller
             ->addColumn('action', function($customer) {
                 return '
                     <div class="btn-group">
-                        <button class="btn btn-sm btn-info view-btn-customer" id="show_price_cus" data-id="'.$customer->kode.'" data-bs-toggle="tooltip" title="View">
+                        <button class="btn btn-sm btn-info view-btn-customer-price" id="show_price_cus" data-id="'.$customer->kode.'" data-bs-toggle="tooltip" title="View">
                             <i class="bx bx-show"></i>
                         </button>
                     </div>

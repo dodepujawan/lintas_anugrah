@@ -350,7 +350,7 @@ $(document).ready(function() {
     $('[data-bs-toggle="tooltip"]').tooltip();
     // ============================= End Of Initialize DataTables =================================
     // =========================== Initialize DataTables Detail Cus ===============================
-    $(document).on("click", ".view-btn-customer", function() {
+    $(document).on("click", ".view-btn-customer-price", function() {
 
         let kodecus = $(this).data("id"); // ambil kode customer
 
