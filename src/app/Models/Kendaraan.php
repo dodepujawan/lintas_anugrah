@@ -12,7 +12,7 @@ class Kendaraan extends Model
         'kode',
         'nama',
         'plat',
-        'jens',
+        'jenis',
         'fno_prk_b',
         'fno_prk_p',
         'fno_prk_s',

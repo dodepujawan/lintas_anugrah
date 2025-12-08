@@ -16,7 +16,7 @@ return new class extends Migration
             $table->char('kode', 20)->nullable(); // Kode diganti jadi 20
             $table->string('nama', 100);
             $table->char('plat', 50);
-            $table->char('jens', 50);
+            $table->char('jenis', 50);
             $table->char('fno_prk_b', 20); // Diubah dari 5 menjadi 20
             $table->char('fno_prk_p', 20); // Diubah dari 5 menjadi 20
             $table->char('fno_prk_s', 20); // Diubah dari 5 menjadi 20

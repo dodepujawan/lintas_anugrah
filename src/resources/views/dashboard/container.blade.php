@@ -167,6 +167,25 @@ $(document).ready(function() {
         });
     }
 // ========================= End Of New Prices Customer ======================================
+// ========================= New Prices ======================================
+    $(document).on('click', '#sidebar_new_rent', function(e) {
+        e.preventDefault();
+        loadNewRentForm();
+    });
+
+    function loadNewRentForm() {
+        $.ajax({
+            url: '{{ route('price-rent.index') }}', // Route to load the form
+            type: 'GET',
+            success: function(response) {
+                $('.master-page').html(response);
+            },
+            error: function() {
+                $('.master-page').html('<p>Error loading form.</p>');
+            }
+        });
+    }
+// ========================= End Of New Prices ======================================
 // +++++++++++++++++++++++++++ End Of SIDEBAR ROOM ++++++++++++++++++++++++++++++++++++++
 });
 </script>

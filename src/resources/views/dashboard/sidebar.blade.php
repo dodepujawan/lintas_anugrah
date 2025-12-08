@@ -81,12 +81,25 @@
                 <ul class="sub-menu collapse" id="priceMenu">
                 <li class="menu-item">
                     <a href="#" class="menu-link" id="sidebar_new_prices">
-                    <span class="menu-text">Price</span>
+                    <span class="menu-text">Ekspedisi</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-link" id="sidebar_prices_customer">
-                    <span class="menu-text">Price Customer</span>
+                    <span class="menu-text">Ekspedisi Customer</span>
+                    </a>
+                </li>
+                   <li class="menu-item">
+                        <div class="dropdown-divider my-2"></div>
+                    </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="sidebar_new_rent">
+                    <span class="menu-text">Rent</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="sidebar_rent_customer">
+                    <span class="menu-text">Rent Customer</span>
                     </a>
                 </li>
                 </ul>

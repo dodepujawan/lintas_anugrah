@@ -37,7 +37,7 @@ class KendaraanController extends Controller
         $request->validate([
             'nama' => 'required|max:100',
             'plat' => 'required|max:50',
-            'jens' => 'required|max:50',
+            'jenis' => 'required|max:50',
             'fno_prk_b' => 'required|max:20',
             'fno_prk_p' => 'required|max:20',
             'fno_prk_s' => 'required|max:20',
@@ -81,7 +81,7 @@ class KendaraanController extends Controller
             'kode' => 'required|max:20|unique:kendaraan,kode,'.$id,
             'nama' => 'required|max:100',
             'plat' => 'required|max:50',
-            'jens' => 'required|max:50',
+            'jenis' => 'required|max:50',
             'fno_prk_b' => 'required|max:20',
             'fno_prk_p' => 'required|max:20',
             'fno_prk_s' => 'required|max:20',
@@ -108,7 +108,7 @@ class KendaraanController extends Controller
 
     // Fungsi Calback
     public function kendaraan_kode() {
-        $role = 'VHC'; // Default prefix untuk customer
+        $role = 'LML'; // Default prefix untuk customer
 
         $lastUser = DB::table('kendaraan')
             ->where('kode', 'LIKE', $role . '%')
@@ -131,7 +131,7 @@ class KendaraanController extends Controller
 
      // Fungsi Calback private
     private function kendaraan_kode_store() {
-        $role = 'VHC';
+        $role = 'LML';
 
         DB::beginTransaction();
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\DriverController;
 use App\Http\Controllers\PricesController;
 use App\Http\Controllers\RuteController;
 use App\Http\Controllers\PricesCustomerController;
+use App\Http\Controllers\PricedinginController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -98,6 +99,14 @@ Route::prefix('price-customer')->group(function() {
     Route::post('/store', [PricesCustomerController::class, 'store'])->name('price-customer.store');
 });
 
+Route::prefix('price-rent')->group(function() {
+    Route::get('/', [PricedinginController::class, 'index'])->name('price-rent.index');
+    // Route::get('/data', [PricesController::class, 'getData'])->name('price-expedition.data');
+    // Route::post('/store', [PricesController::class, 'store'])->name('price-expedition.store');
+    // Route::get('/show/{id}', [PricesController::class, 'show'])->name('price-expedition.show');
+    // Route::post('/update/{id}', [PricesController::class, 'update'])->name('price-expedition.update');
+    // Route::post('/destroy/{id}', [PricesController::class, 'destroy'])->name('price-expedition.destroy');
+});
 // Route::prefix('register')->group(function () {
 //     Route::get('/users', UsersPage::class)->name('users.page');
 // });

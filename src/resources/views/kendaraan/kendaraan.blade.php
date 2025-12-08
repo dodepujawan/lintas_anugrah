@@ -117,8 +117,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="jens" class="form-label">Jenis</label>
-                            <input type="text" class="form-control" id="jens" name="jens" required>
+                            <label for="jenis" class="form-label">Jenis</label>
+                            <input type="text" class="form-control" id="jenis" name="jenis" required>
                         </div>
                         <div class="mb-3">
                             <label for="fno_prk_b" class="form-label">FNO PRK B</label>
@@ -183,7 +183,7 @@ $(document).ready(function() {
             {data: 'kode', name: 'kode'},
             {data: 'nama', name: 'nama'},
             {data: 'plat', name: 'plat'},
-            {data: 'jens', name: 'jens'},
+            {data: 'jenis', name: 'jenis'},
             {data: 'fno_prk_b', name: 'fno_prk_b'},
             {data: 'fno_prk_p', name: 'fno_prk_p'},
             {data: 'fno_prk_s', name: 'fno_prk_s'},
@@ -284,7 +284,7 @@ $(document).ready(function() {
             $('#kode').val(data.kode);
             $('#nama').val(data.nama);
             $('#plat').val(data.plat);
-            $('#jens').val(data.jens);
+            $('#jenis').val(data.jenis);
             $('#fno_prk_b').val(data.fno_prk_b);
             $('#fno_prk_p').val(data.fno_prk_p);
             $('#fno_prk_s').val(data.fno_prk_s);

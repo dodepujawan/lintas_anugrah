@@ -212,26 +212,3 @@ class CustomerController extends Controller
     }
 }
 
-
-// public function customer_show($id)
-// {
-//     $customer = Mcustomer::find($id);
-
-//     // Cek dulu apakah customer ada
-//     if (!$customer) {
-//         return response()->json([
-//             'status' => 'error',
-//             'message' => 'Data tidak ditemukan'
-//         ], 404);
-//     }
-
-//     // Baru format tanggal (aman karena $customer sudah pasti ada)
-//     $customer->pemilik_tgl_lahir = $customer->pemilik_tgl_lahir
-//         ? $customer->pemilik_tgl_lahir->format('Y-m-d')
-//         : null;
-
-//     return response()->json([
-//         'status' => 'success',
-//         'data' => $customer
-//     ]);
-// }
