@@ -101,7 +101,7 @@ Route::prefix('price-customer')->group(function() {
 
 Route::prefix('price-rent')->group(function() {
     Route::get('/', [PricedinginController::class, 'index'])->name('price-rent.index');
-    // Route::get('/data', [PricesController::class, 'getData'])->name('price-expedition.data');
+    Route::get('/data', [PricedinginController::class, 'getData'])->name('price-rent.data');
     // Route::post('/store', [PricesController::class, 'store'])->name('price-expedition.store');
     // Route::get('/show/{id}', [PricesController::class, 'show'])->name('price-expedition.show');
     // Route::post('/update/{id}', [PricesController::class, 'update'])->name('price-expedition.update');

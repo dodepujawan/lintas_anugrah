@@ -80,14 +80,14 @@
     <h2 class="mb-4">MASTER DATA PRICE DINGIN</h2>
 
     <!-- Tabel Data -->
-    <div class="card shadow-sm card-price" id="master_table_price">
+    <div class="card shadow-sm card-price" id="master_table_price_dingin">
         <div class="card-header card-price-header bg-white">
             <div>
                 <h2 class="h5 mb-0 text-dark">Data Price Dingin</h2>
                 <small class="text-muted">Data harga untuk menyewa kendaraan dingin</small>
             </div>
             <div class="d-flex gap-2">
-                <button id="toggleFormBtn" class="btn btn-success">
+                <button id="toggleFormDinginBtn" class="btn btn-success">
                     <i class="fas fa-plus me-2"></i>Tambah Data
                 </button>
             </div>
@@ -98,13 +98,13 @@
                     <thead class="table-dark">
                         <tr>
                             <th width="5%">No</th>
-                            <th width="10%">TANGGAL</th>
                             <th width="10%">KODE</th>
                             <th>ITEM</th>
                             <th width="10%">PERIODE</th>
                             <th width="10%">PLAT</th>
                             <th width="10%">JENIS</th>
                             <th width="12%">HARGA</th>
+                            <th width="10%">TANGGAL</th>
                             <th width="15%">AKSI</th>
                         </tr>
                     </thead>
@@ -117,7 +117,7 @@
     </div>
 
     <!-- Form Input -->
-    <div id="formContainer" class="form-section" style="display: none;">
+    <div id="formDinginContainer" class="form-section" style="display: none;">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h4 class="mb-0"><i class="fas fa-edit me-2"></i>Form Data Price Dingin</h4>
             <button type="button" class="btn-close" id="closeFormBtn" aria-label="Close"></button>
@@ -125,109 +125,68 @@
 
         <form id="pricedinginForm">
             @csrf
-            <input type="hidden" id="priceId" name="id">
+            <input type="hidden" id="pricePendinginId" name="id">
 
             <div class="row g-4">
                 <!-- Kolom Kiri -->
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <label class="form-label fw-semibold">TANGGAL <span class="text-danger">*</span></label>
-                        <input type="date" id="TANGGAL" name="TANGGAL"
-                               class="form-control" required>
-                        <small class="text-muted">Format: YYYY-MM-DD</small>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">KODE <span class="text-danger">*</span></label>
-                        <input type="text" id="KODE" name="KODE"
-                               class="form-control" placeholder="Contoh: BRG001"
-                               maxlength="20" required>
+                        <label class="form-label fw-semibold">JENIS <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" id="jenis_pricedingin" name="jenis_pricedingin"
+                                class="form-control" placeholder="Silahkan Tekan Pilih" readonly required>
+                            <button type="button" class="btn btn-outline-primary" id="btnPilihJenis">
+                                <i class="bi bi-search me-1"></i> Pilih
+                            </button>
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold">PERIODE <span class="text-danger">*</span></label>
-                        <input type="text" id="PERIODE" name="PERIODE"
-                               class="form-control" placeholder="Contoh: PERIODE-2024"
-                               maxlength="50" required>
+                        <input type="text" id="periode_pricedingin" name="periode_pricedingin"
+                               class="form-control" placeholder="Contoh: PERIODE-2024" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold">PLAT <span class="text-danger">*</span></label>
-                        <input type="text" id="PLAT" name="PLAT"
-                               class="form-control" placeholder="Contoh: B 1234 CD"
-                               maxlength="50" required>
+                        <input type="text" id="plat_pricedingin" name="periode_pricedingin"
+                               class="form-control" required>
                     </div>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <label class="form-label fw-semibold">JENIS <span class="text-danger">*</span></label>
-                        <select id="JENIS" name="JENIS" class="form-select" required>
-                            <option value="">Pilih Jenis</option>
-                            <option value="BAUT">BAUT</option>
-                            <option value="MUR">MUR</option>
-                            <option value="RING">RING</option>
-                            <option value="PAKU">PAKU</option>
-                            <option value="LAINNYA">LAINNYA</option>
-                        </select>
+                        <label class="form-label fw-semibold">KODE MOBIL<span class="text-danger">*</span></label>
+                        <input type="text" id="kode_pricedingin" name="kode_pricedingin"
+                               class="form-control" placeholder="Contoh: BRG001"
+                               maxlength="20" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold">ITEM <span class="text-danger">*</span></label>
-                        <input type="text" id="ITEM" name="ITEM"
-                               class="form-control" placeholder="Contoh: BAUT 5CM MERK ABC"
-                               maxlength="100" required>
+                        <input type="text" id="item_pricedingin" name="item_pricedingin"
+                               class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold">HARGA <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <span class="input-group-text">Rp</span>
-                            <input type="number" id="HARGA" name="HARGA"
+                            <input type="number" id="harga_pricedingin" name="harga_pricedingin"
                                    class="form-control" placeholder="0"
                                    min="0" step="1" required>
                         </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">USER</label>
-                        <input type="text" id="USER" name="USER"
-                               class="form-control" placeholder="Nama User"
-                               maxlength="50" value="{{ auth()->user()->name ?? 'ADMIN' }}" readonly>
-                    </div>
-                </div>
-
-                <!-- Kolom Bawah (Full Width) -->
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">USER EDIT</label>
-                        <input type="text" id="USEREDIT" name="USEREDIT"
-                               class="form-control" placeholder="Nama User Edit"
-                               maxlength="50" value="{{ auth()->user()->name ?? 'ADMIN' }}" readonly>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">KUNCI</label>
-                        <div class="input-group">
-                            <input type="text" id="KUNCI" name="KUNCI"
-                                   class="form-control" placeholder="Kunci unik"
-                                   maxlength="100">
-                            <button type="button" class="btn btn-outline-secondary" id="generateKeyBtn">
-                                <i class="fas fa-key me-1"></i>Generate
-                            </button>
-                        </div>
-                        <small class="text-muted">Kunci unik untuk identifikasi data</small>
                     </div>
                 </div>
             </div>
 
             <!-- Tombol Aksi -->
             <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
-                <button type="button" id="cancelBtn" class="btn btn-secondary">
+                <button type="button" id="cancelDinginBtn" class="btn btn-secondary">
                     <i class="fas fa-times me-2"></i>Batal
                 </button>
-                <button type="submit" id="submitBtn" class="btn btn-primary">
+                <button type="submit" id="submitDinginBtn" class="btn btn-primary">
                     <i class="fas fa-save me-2"></i>Simpan Data
                 </button>
             </div>
@@ -314,6 +273,64 @@
 
 <script>
 $(document).ready(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    // ========================== Initialize DataTable ================================
+    var table = $('#pricedinginTable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('price-rent.data') }}",
+        columns: [
+            { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
 
+            { data: 'KODE', name: 'KODE' },
+            { data: 'ITEM', name: 'ITEM' },
+            { data: 'PERIODE', name: 'PERIODE' },
+            { data: 'PLAT', name: 'PLAT' },
+            { data: 'JENIS', name: 'JENIS' },
+            { data: 'HARGA', name: 'HARGA' },
+            { data: 'created_at', name: 'created_at' },
+            { data: 'action', name: 'action', orderable: false, searchable: false }
+        ],
+
+        language: {
+            search: "Cari:",
+            lengthMenu: "Tampil _MENU_ data",
+            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+            paginate: {
+                first: "Pertama",
+                last: "Terakhir",
+                next: "Selanjutnya",
+                previous: "Sebelumnya"
+            }
+        }
+    });
+    // ====================== End Of Initialize DataTable ==============================
+    // ========================== Toggle form show/hide ===============================
+    $('#toggleFormDinginBtn').click(function() {
+        $('#formDinginContainer').toggle();
+        resetFormDingin();
+        $('#master_table_price_dingin').hide();
+    });
+    $('#cancelDinginBtn').click(function() {
+        $('#formContainer').hide();
+        resetFormDingin();
+        $('#master_table_price_dingin').show();
+        $('#pricedinginTable').DataTable().ajax.reload();
+    });
+    // ===================== End Of Toggle form show/hide ===============================
+    // ============================ Reset form ========================================
+    function resetFormDingin() {
+        $('#pricedinginForm')[0].reset();
+        $('#pricePendinginId').val('');
+        $('#submitDinginBtn').text('Simpan Data');
+        // Clear validation errors
+        $('.is-invalid').removeClass('is-invalid');
+        $('.invalid-feedback').remove();
+    }
+    // ======================== End Of Reset form ======================================
 });
 </script>
